@@ -5,6 +5,8 @@ export const SITE = {
     "https://www.doordash.com/store/aloha-tea-&-coffee-glendale-624890/",
   giftCardUrl: "#",
   instagramUrl: "https://www.instagram.com/aloha.teacoffee/",
+  facebookUrl: "#",
+  cateringEmail: "catering@alohateacoffee.com",
 }
 
 export type Location = {

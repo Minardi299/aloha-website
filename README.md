@@ -38,3 +38,16 @@ Body text is lorem ipsum placeholder copy. The Scottsdale address is a placehold
 ## CI
 
 Every push to `main` and every pull request runs `.github/workflows/ci.yml`. The workflow lints the code, builds the static site, and uploads `build/client/` as the `static-site` artifact.
+
+To run CI by hand, open Actions → CI → "Run workflow", or run `gh workflow run CI`.
+
+## Releases
+
+Push a tag that starts with `v` to publish a release:
+
+```sh
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+The release workflow builds the site, zips it, and attaches the zip to a GitHub release. Download the zip, unzip it, and serve the folder with any static server, for example `python3 -m http.server 8000`. You can also start the workflow from the Actions tab with a tag name.

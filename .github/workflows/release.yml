@@ -1,0 +1,55 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag for the release (for example v0.2.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static site
+        run: pnpm build
+
+      - name: Package the site
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          echo "TAG=$TAG" >> "$GITHUB_ENV"
+          cd build/client
+          zip -r "../../aloha-website-$TAG.zip" .
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$TAG" "aloha-website-$TAG.zip" \
+            --repo "${{ github.repository }}" \
+            --title "Aloha Tea Coffee website $TAG" \
+            --notes "Static build of the site (plain HTML, CSS, and JS).
+
+          To run it locally:
+          1. Download and unzip \`aloha-website-$TAG.zip\`.
+          2. Serve the folder with any static server, for example: \`python3 -m http.server 8000\` or \`npx serve\`.
+          3. Open http://localhost:8000 in a browser.
+
+          To deploy, upload the folder contents to any static web host. Map the host's 404 page to \`__spa-fallback.html\`."

@@ -1,5 +1,6 @@
 import { Link } from "react-router"
 import { Logo } from "@/components/logo"
+import { FacebookIcon, InstagramIcon } from "@/components/social-icons"
 import { LOREM, SITE } from "@/lib/site"
 
 export function Footer() {
@@ -28,9 +29,12 @@ export function Footer() {
             <Link to="/#gift-cards" className="site-footer-link">
               Gift cards
             </Link>
+            <Link to="/catering" className="site-footer-link">
+              Catering
+            </Link>
           </div>
           <div className="site-footer-col">
-            <p className="site-footer-heading">Connect</p>
+            <p className="site-footer-heading">Follow us</p>
             <a
               href={SITE.orderUrl}
               target="_blank"
@@ -39,17 +43,26 @@ export function Footer() {
             >
               Order online
             </a>
-            <a
-              href={SITE.instagramUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="site-footer-link"
-            >
-              Instagram
-            </a>
-            <Link to="/terms" className="site-footer-link">
-              Terms &amp; Conditions
-            </Link>
+            <div className="social-row">
+              <a
+                href={SITE.instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                aria-label="Instagram"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href={SITE.facebookUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                aria-label="Facebook"
+              >
+                <FacebookIcon />
+              </a>
+            </div>
           </div>
         </div>
         <div className="site-footer-bottom">
