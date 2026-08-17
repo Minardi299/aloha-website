@@ -50,10 +50,14 @@ export const LOCATIONS: Location[] = [
   },
   {
     name: "Scottsdale",
-    address: "1234 N Placeholder Rd, Scottsdale, AZ 85251",
-    phone: "(480) 000-0000",
-    hours: ["Hours coming soon"],
-    mapsUrl: "https://maps.google.com/?q=Scottsdale,+AZ",
+    address: "6245 E Bell Rd #113, Scottsdale, AZ 85254",
+    phone: "(480) 809-9909",
+    hours: [
+      "Mon – Thu · 10 am – 9 pm",
+      "Fri – Sat · 10 am – 10 pm",
+      "Sun · 10 am – 9:30 pm",
+    ],
+    mapsUrl: "https://maps.google.com/?q=6245+E+Bell+Rd+%23113,+Scottsdale,+AZ+85254",
     orderUrl: "https://aloha2.magsoft.us/order/online/desktop",
     photo: "/images/location-scottsdale.jpg",
     openingSoon: true,
