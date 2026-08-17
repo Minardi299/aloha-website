@@ -43,7 +43,7 @@ export function Locations() {
                   </span>
                 </div>
               </div>
-              <div className="flex gap-3">
+              <div className="flex items-center gap-5">
                 <Button
                   size="sm"
                   nativeButton={false}
@@ -57,20 +57,14 @@ export function Locations() {
                 >
                   Order online
                 </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  nativeButton={false}
-                  render={
-                    <a
-                      href={location.mapsUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    />
-                  }
+                <a
+                  href={location.mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="location-directions-link"
                 >
-                  Get directions
-                </Button>
+                  Get directions <span aria-hidden="true">→</span>
+                </a>
               </div>
             </div>
           ))}

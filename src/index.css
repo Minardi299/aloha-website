@@ -298,6 +298,20 @@
     @apply mt-0.5 size-4 shrink-0;
     color: var(--brand-orange);
   }
+  .location-directions-link {
+    @apply relative inline-flex items-center gap-1.5 text-sm font-semibold;
+    color: var(--brand-orange);
+  }
+  .location-directions-link::after {
+    @apply absolute inset-x-0 -bottom-1 h-0.5 content-[''];
+    background: var(--foreground);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease;
+  }
+  .location-directions-link:hover::after {
+    transform: scaleX(1);
+  }
 
   /* ===== Footer ===== */
   .site-footer {
