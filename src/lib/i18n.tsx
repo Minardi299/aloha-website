@@ -8,6 +8,8 @@ export const STRINGS = {
       home: "Home",
       menu: "Menu",
       about: "About us",
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
     },
     orderNow: "Order now",
     hero: {
@@ -191,6 +193,8 @@ export const STRINGS = {
       home: "Trang chủ",
       menu: "Thực đơn",
       about: "Về chúng tôi",
+      openMenu: "Mở menu",
+      closeMenu: "Đóng menu",
     },
     orderNow: "Đặt hàng",
     hero: {

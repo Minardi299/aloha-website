@@ -200,14 +200,30 @@
     @apply flex items-center justify-between gap-6;
     height: var(--header-height);
   }
+  .site-header-right {
+    @apply flex items-center gap-1 sm:gap-2;
+  }
   .site-nav {
-    @apply flex items-center gap-1;
+    @apply hidden items-center gap-1 md:flex;
   }
   .site-nav-link {
     @apply rounded-md px-2 py-2 text-sm font-medium whitespace-nowrap text-muted-foreground hover:bg-muted hover:text-foreground sm:px-3;
   }
-  .site-nav-link-home {
-    @apply hidden sm:inline-block;
+  /* !important: must beat the Button component's inline-flex utility */
+  .site-nav-toggle {
+    @apply md:hidden!;
+  }
+  .site-nav-mobile {
+    @apply border-t bg-background md:hidden;
+  }
+  .site-nav-mobile-inner {
+    @apply flex flex-col gap-1 py-3;
+  }
+  .site-nav-mobile .site-nav-link {
+    @apply block text-base;
+  }
+  .site-nav-mobile .lang-switch {
+    @apply mt-2 border-t pt-3;
   }
   .lang-switch {
     @apply flex items-center gap-0.5 px-1 text-sm;
