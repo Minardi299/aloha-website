@@ -81,3 +81,20 @@ Two host settings matter:
 
 1. Map the host's 404 page to `404.html` so unknown URLs show the site's own 404 page.
 2. Serve the site from the domain root (`example.com`), not a subfolder. Asset URLs start with `/`, so a subfolder breaks them.
+
+## Run with Docker
+
+Every push to `main` publishes an image to the GitHub Container Registry. It contains the built site behind nginx, with the 404 page and cache headers already configured.
+
+```sh
+docker run -p 8080:80 ghcr.io/minardi299/aloha-website:latest
+```
+
+Then open http://localhost:8080. Versioned tags are published too, for example `ghcr.io/minardi299/aloha-website:0.1.0`. The image supports amd64 and arm64.
+
+To build the image yourself:
+
+```sh
+docker build -t aloha-website .
+docker run -p 8080:80 aloha-website
+```
