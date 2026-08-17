@@ -49,6 +49,21 @@ export const STRINGS = {
         },
       ],
     },
+    signature: {
+      kicker: "Signature drink",
+      title: "Traditional Aloha Milk Tea – essence of meticulous craft",
+      p1: "If one flavor represents the soul of Aloha Tea Coffee Pho, it is our Traditional Aloha Milk Tea.",
+      p2: "Instead of following industrial trends, we preserve the original values through a handcrafted cooking method combined with selected natural ingredients. Every drop of tea is brewed to the perfect standard, blended with a gentle creaminess and chewy, fragrant pearls, creating a drink that doesn’t just quench your thirst but touches your emotions. It is our passion, our memory, and the most respectful greeting we send to you.",
+      photoAlt: "A cup of Traditional Aloha Milk Tea with pearls",
+    },
+    pho: {
+      kicker: "The authentic Pho",
+      title: "Aloha Pho – a unique flavor in the heart of the desert",
+      p1: "“Pho” is a dish with a unique flavor profile that you won’t find anywhere else. At Aloha Tea Coffee Pho, every slice of fresh beef is carefully selected and combined with special spices using a family recipe to create a rich, naturally sweet broth.",
+      p2: "Amidst the arid Arizona desert, a steaming, herb-scented bowl of Pho is the perfect catalyst to pair with our refreshing drinks. The interesting contrast between the warm, rich savory Pho broth and the cool, sweet notes of our handcrafted milk teas or tropical fruit teas will awaken all your senses.",
+      p3: "Everything harmonizes to create the perfect combination for moments of relaxation, enjoying life to the fullest, and finding a little inner peace right here at Aloha Tea Coffee Pho.",
+      photoAlt: "A steaming bowl of Aloha Pho with fresh beef and herbs",
+    },
     locations: {
       kicker: "Come say hi",
       title: "Two homes, one aloha",
@@ -62,6 +77,18 @@ export const STRINGS = {
       kicker: "Menu",
       title: "What are you craving?",
       lead: "Every drink is made to order. Find your favorite and order it for pickup.",
+      drinksTitle: "Drinks",
+      foodTitle: "Food",
+      descriptions: {
+        "Milk Tea":
+          "Island signature: the handcrafted Traditional Aloha Milk Tea, alongside Brown Sugar, Blue Mint, Jasmine, Oolong, and Matcha.",
+        "Fruit Tea":
+          "Cool down in the desert: Exotic Tropical, Island Spring, Purple Sunset, Hawaiian Fever, O-Human, and Peachie Teasie.",
+        Coffee: "Signature Vietnamese cheese foam coffee, in many flavors.",
+        Smoothie: "Fresh smoothies: strawberry, honeydew, mango, avocado, and more.",
+        "Aloha Food":
+          "The authentic taste: special combination Pho and toppings.",
+      } as Record<string, string>,
     },
     catering: {
       kicker: "Catering",
@@ -204,6 +231,21 @@ export const STRINGS = {
         },
       ],
     },
+    signature: {
+      kicker: "Món signature",
+      title: "Trà sữa Aloha truyền thống – tinh hoa từ sự tỉ mỉ",
+      p1: "Nếu phải chọn một hương vị đại diện cho linh hồn của Aloha Tea Coffee Pho, đó chính là Trà sữa Aloha truyền thống.",
+      p2: "Không chạy theo sự hào nhoáng công nghiệp, chúng tôi gìn giữ giá trị nguyên bản bằng phương pháp nấu thủ công kết hợp với nguồn nguyên liệu tự nhiên, chất lượng tuyển chọn. Từng giọt trà được ủ chuẩn độ, quyện cùng vị béo ngậy thanh nhẹ và trân châu dẻo thơm, tạo nên một thức uống không chỉ giải khát mà còn chạm đến cảm xúc. Đó là tâm huyết, là ký ức và là lời chào trân trọng nhất chúng tôi gửi tặng bạn.",
+      photoAlt: "Ly Trà sữa Aloha truyền thống với trân châu",
+    },
+    pho: {
+      kicker: "Món phở",
+      title: "Tô phở Aloha – hương vị độc bản giữa lòng sa mạc",
+      p1: "“Pho” là món ăn mang hương vị độc bản mà bạn khó có thể tìm thấy ở bất kỳ nơi nào khác. Tại Aloha Tea Coffee Pho, từng lát thịt bò tươi ngon được tuyển chọn kỹ lưỡng, kết hợp cùng các loại gia vị đặc biệt theo công thức gia truyền để tạo nên phần nước súp đậm đà, thanh ngọt tự nhiên.",
+      p2: "Giữa sự khô cằn của miền sa mạc Arizona, một tô phở đậm vị thơm lừng hương thảo mộc chính là chất xúc tác hoàn hảo để kết hợp với các món thức uống thanh mát, sảng khoái tại quán. Sự đối lập thú vị giữa cái ấm nồng, đậm đà của nước súp phở gia truyền và vị tươi mát, ngọt lành từ những ly trà sữa thủ công hay trà trái cây nhiệt đới sẽ đánh thức mọi giác quan của bạn.",
+      p3: "Tất cả hòa quyện lại, tạo nên một sự kết hợp hoàn hảo cho những phút giây thư giãn, tận hưởng trọn vẹn cuộc sống và tìm thấy chút bình yên ngay tại Aloha Tea Coffee Pho.",
+      photoAlt: "Tô phở Aloha nóng hổi với thịt bò tươi và rau thơm",
+    },
     locations: {
       kicker: "Ghé chơi nhé",
       title: "Hai mái nhà, một tinh thần aloha",
@@ -217,6 +259,18 @@ export const STRINGS = {
       kicker: "Thực đơn",
       title: "Hôm nay bạn thèm gì?",
       lead: "Mỗi món đều được pha khi bạn gọi. Tìm món yêu thích của bạn và đặt mang đi.",
+      drinksTitle: "Thức uống",
+      foodTitle: "Món ăn",
+      descriptions: {
+        "Milk Tea":
+          "Signature của đảo: Trà sữa Aloha truyền thống nấu thủ công, cùng Brown Sugar, Blue Mint, Jasmine, Oolong và Matcha.",
+        "Fruit Tea":
+          "Giải nhiệt giữa sa mạc: Exotic Tropical, Island Spring, Purple Sunset, Hawaiian Fever, O-Human và Peachie Teasie.",
+        Coffee: "Cà phê kem cheese kiểu Việt đặc trưng, với nhiều hương vị.",
+        Smoothie: "Sinh tố tươi: dâu, dưa lưới, xoài, bơ và nhiều vị khác.",
+        "Aloha Food":
+          "Hương vị nguyên bản: phở đặc biệt thập cẩm cùng nhiều topping.",
+      } as Record<string, string>,
     },
     catering: {
       kicker: "Đặt tiệc",

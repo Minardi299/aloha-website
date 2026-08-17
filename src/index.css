@@ -327,9 +327,15 @@
     @apply flex flex-col gap-6;
     padding-block: calc(var(--section-pad) * 0.7) 3rem;
   }
+  .menu-groups {
+    @apply flex flex-col gap-14;
+    padding-bottom: var(--section-pad);
+  }
+  .menu-group {
+    @apply flex flex-col gap-6;
+  }
   .menu-grid {
     @apply grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3;
-    padding-bottom: var(--section-pad);
   }
   .menu-card {
     @apply flex flex-col items-center gap-3 text-center;
@@ -339,6 +345,9 @@
   }
   .menu-card-name {
     @apply font-heading text-lg font-semibold;
+  }
+  .menu-card-desc {
+    @apply max-w-xs text-sm text-muted-foreground;
   }
 
   /* ===== Footer ===== */
