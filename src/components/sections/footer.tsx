@@ -26,9 +26,6 @@ export function Footer() {
             <Link to="/#about" className="site-footer-link">
               About us
             </Link>
-            <Link to="/#locations" className="site-footer-link">
-              Locations
-            </Link>
             <Link to="/#gift-cards" className="site-footer-link">
               Gift cards
             </Link>
