@@ -3,5 +3,5 @@ import type { Config } from "@react-router/dev/config"
 export default {
   appDirectory: "src",
   ssr: false,
-  prerender: ["/", "/terms", "/catering"],
+  prerender: ["/", "/menu", "/terms", "/catering"],
 } satisfies Config

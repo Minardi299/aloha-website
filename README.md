@@ -27,7 +27,7 @@ Deploy `build/client/` as the static root of any web host. Map the host's 404 ha
 ## Project structure
 
 - `src/components/sections/` — one file per page section (navbar, hero, about, gift-loyalty, locations, footer). Add, remove, or replace sections here.
-- `src/pages/` — route components (home, terms, not-found)
+- `src/pages/` — route components (home, menu, catering, terms, not-found)
 - `src/routes.ts` — the route table; `src/root.tsx` — the HTML shell and meta tags
 - `src/lib/site.ts` — brand data, order URL, and locations
 - `src/index.css` — the single source of truth for styling: palette tokens, site tokens, and all section classes

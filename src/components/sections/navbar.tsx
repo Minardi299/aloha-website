@@ -15,6 +15,9 @@ export function Navbar() {
           <Link to="/" className="site-nav-link site-nav-link-home">
             Home
           </Link>
+          <Link to="/menu" className="site-nav-link">
+            Menu
+          </Link>
           <Link to="/#about" className="site-nav-link">
             About us
           </Link>
