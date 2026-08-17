@@ -18,7 +18,7 @@ export const MENU_CATEGORIES: MenuCategory[] = [
   { name: "Aloha Food", group: "food", photo: "/images/menu/aloha-food.jpg" },
   { name: "Milk Tea", group: "drinks", photo: "/images/menu/milk-tea.jpg" },
   { name: "Smoothie", group: "drinks", photo: "/images/menu/smoothie.jpg" },
-  { name: "Cheese Foam Coffee and Tea", group: "drinks", photo: "/images/menu/coffee.jpg" },
+  { name: "Cheese Foam Coffee & Tea", group: "drinks", photo: "/images/menu/coffee.jpg" },
   { name: "Fruit Tea", group: "drinks", photo: "/images/menu/fruit-tea.jpg" },
   { name: "Dessert & Snack", group: "food", photo: "/images/menu/dessert-snack.jpg" },
 ]

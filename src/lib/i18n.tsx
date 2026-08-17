@@ -84,7 +84,7 @@ export const STRINGS = {
           "Island signature: the handcrafted Traditional Aloha Milk Tea, alongside Brown Sugar, Blue Mint, Jasmine, Oolong, and Matcha.",
         "Fruit Tea":
           "Cool down in the desert: Exotic Tropical, Island Spring, Purple Sunset, Hawaiian Fever, O-Human, and Peachie Teasie.",
-        "Cheese Foam Coffee and Tea":
+        "Cheese Foam Coffee & Tea":
           "Signature Vietnamese cheese foam coffee, in many flavors.",
         Smoothie: "Fresh smoothies: strawberry, honeydew, mango, avocado, and more.",
         "Aloha Food":
@@ -267,7 +267,7 @@ export const STRINGS = {
           "Signature của đảo: Trà sữa Aloha truyền thống nấu thủ công, cùng Brown Sugar, Blue Mint, Jasmine, Oolong và Matcha.",
         "Fruit Tea":
           "Giải nhiệt giữa sa mạc: Exotic Tropical, Island Spring, Purple Sunset, Hawaiian Fever, O-Human và Peachie Teasie.",
-        "Cheese Foam Coffee and Tea":
+        "Cheese Foam Coffee & Tea":
           "Cà phê kem cheese kiểu Việt đặc trưng, với nhiều hương vị.",
         Smoothie: "Sinh tố tươi: dâu, dưa lưới, xoài, bơ và nhiều vị khác.",
         "Aloha Food":
