@@ -126,8 +126,8 @@
     --brand-yellow: #FDB913;
     --brand-blue: #4DBBE4;
     --brand-amber: #FDB913;
-    --surface-dark: #1C7C86;
-    --surface-dark-foreground: #E7F7F3;
+    --surface-dark: #D9F1FA;
+    --surface-dark-foreground: #1C7C86;
 }
 
 @layer base {
@@ -183,13 +183,13 @@
     color: var(--surface-dark-foreground);
   }
   .section-dark .section-kicker {
-    color: var(--brand-yellow);
+    color: var(--brand-orange);
   }
   .section-dark .prose-block {
-    color: rgb(231 247 243 / 0.85);
+    color: rgb(23 86 94 / 0.8);
   }
   .section-dark .photo {
-    border-color: rgb(231 247 243 / 0.15);
+    border-color: rgb(23 86 94 / 0.12);
   }
 
   /* ===== Header / nav ===== */
