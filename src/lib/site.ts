@@ -3,7 +3,8 @@ export const SITE = {
   tagline: "Boba tea, Vietnamese coffee, and a warm hello.",
   giftCardUrl: "#",
   instagramUrl: "https://www.instagram.com/aloha.teacoffee/",
-  facebookUrl: "#",
+  doordashUrl:
+    "https://www.doordash.com/store/aloha-tea-&-coffee-glendale-624890/853210/",
   cateringEmail: "catering@alohateacoffee.com",
 }
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 import { Logo } from "@/components/logo"
-import { InstagramIcon } from "@/components/social-icons"
+import { DoorDashIcon, InstagramIcon } from "@/components/social-icons"
 import { SITE } from "@/lib/site"
 
 export function Footer() {
@@ -44,6 +44,15 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <InstagramIcon />
+              </a>
+              <a
+                href={SITE.doordashUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="social-link"
+                aria-label="DoorDash"
+              >
+                <DoorDashIcon />
               </a>
             </div>
           </div>
