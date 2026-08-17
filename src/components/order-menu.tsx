@@ -7,13 +7,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { useI18n } from "@/lib/i18n"
 import { LOCATIONS } from "@/lib/site"
 
 export function OrderMenu({ size }: { size?: "sm" | "lg" }) {
+  const { t } = useI18n()
   return (
     <DropdownMenu>
       <DropdownMenuTrigger render={<Button size={size} />}>
-        Order now
+        {t.orderNow}
         <ChevronDownIcon data-icon="inline-end" />
       </DropdownMenuTrigger>
       <DropdownMenuContent>

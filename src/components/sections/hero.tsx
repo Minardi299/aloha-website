@@ -1,37 +1,36 @@
 import { Link } from "react-router"
 import { OrderMenu } from "@/components/order-menu"
 import { Button } from "@/components/ui/button"
+import { useI18n } from "@/lib/i18n"
 
 export function Hero() {
+  const { t, path } = useI18n()
   return (
     <section className="hero">
       <div className="site-container hero-inner">
         <div className="hero-copy">
-          <p className="hero-eyebrow">Boba tea · Vietnamese coffee · Arizona</p>
+          <p className="hero-eyebrow">{t.hero.eyebrow}</p>
           <h1 className="hero-title">
-            Say <span className="hero-title-accent">aloha</span> to your new
-            favorite cup
+            {t.hero.titleBefore}
+            <span className="hero-title-accent">{t.hero.titleAccent}</span>
+            {t.hero.titleAfter}
           </h1>
-          <p className="hero-lead">
-            Hand-shaken milk teas, fresh fruit teas, and slow-dripped
-            Vietnamese coffee, made to order in Glendale, Arizona. Come in,
-            say hello, and find the drink you&apos;ll keep coming back for.
-          </p>
+          <p className="hero-lead">{t.hero.lead}</p>
           <div className="hero-actions">
             <OrderMenu size="lg" />
             <Button
               size="lg"
               variant="outline"
               nativeButton={false}
-              render={<Link to="/#locations" />}
+              render={<Link to={path("/#locations")} />}
             >
-              Find a location
+              {t.hero.findLocation}
             </Button>
           </div>
         </div>
         <img
           src="/images/hero.jpg"
-          alt="An iced rose tea in an Aloha Tea Coffee cup"
+          alt={t.hero.photoAlt}
           className="hero-photo"
         />
       </div>

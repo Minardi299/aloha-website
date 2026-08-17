@@ -1,28 +1,30 @@
 import { Clock, MapPin, Phone } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { useI18n } from "@/lib/i18n"
 import { LOCATIONS } from "@/lib/site"
 
 export function Locations() {
+  const { t } = useI18n()
   return (
     <section id="locations" className="section">
       <div className="site-container flex flex-col gap-12">
         <div className="section-header">
-          <p className="section-kicker">Come say hi</p>
-          <h2 className="section-title">Two homes, one aloha</h2>
+          <p className="section-kicker">{t.locations.kicker}</p>
+          <h2 className="section-title">{t.locations.title}</h2>
         </div>
         <div className="locations-grid">
           {LOCATIONS.map((location) => (
             <div key={location.name} className="location">
               <img
                 src={location.photo}
-                alt={`Inside the ${location.name} shop`}
+                alt={t.locations.photoAlt.replace("{name}", location.name)}
                 className="location-photo"
               />
               <div className="flex items-center gap-3">
                 <h3 className="location-name">{location.name}</h3>
                 {location.openingSoon && (
-                  <Badge variant="secondary">Opening soon</Badge>
+                  <Badge variant="secondary">{t.locations.openingSoon}</Badge>
                 )}
               </div>
               <div className="location-details">
@@ -37,7 +39,10 @@ export function Locations() {
                 <div className="location-detail">
                   <Clock className="location-detail-icon" />
                   <span className="flex flex-col gap-1">
-                    {location.hours.map((line) => (
+                    {(location.openingSoon
+                      ? [t.locations.hoursComingSoon]
+                      : location.hours
+                    ).map((line) => (
                       <span key={line}>{line}</span>
                     ))}
                   </span>
@@ -55,7 +60,7 @@ export function Locations() {
                     />
                   }
                 >
-                  Order online
+                  {t.locations.orderOnline}
                 </Button>
                 <a
                   href={location.mapsUrl}
@@ -63,7 +68,7 @@ export function Locations() {
                   rel="noreferrer"
                   className="location-directions-link"
                 >
-                  Get directions <span aria-hidden="true">→</span>
+                  {t.locations.getDirections} <span aria-hidden="true">→</span>
                 </a>
               </div>
             </div>

@@ -1,17 +1,16 @@
 import { OrderMenu } from "@/components/order-menu"
+import { useI18n } from "@/lib/i18n"
 import { MENU_CATEGORIES } from "@/lib/site"
 
 export default function MenuPage() {
+  const { t } = useI18n()
   return (
     <div className="site-container">
       <div className="menu-header">
         <div className="section-header">
-          <p className="section-kicker">Menu</p>
-          <h1 className="section-title">What are you craving?</h1>
-          <p className="section-lead">
-            Every drink is made to order. Find your favorite and order it for
-            pickup.
-          </p>
+          <p className="section-kicker">{t.menu.kicker}</p>
+          <h1 className="section-title">{t.menu.title}</h1>
+          <p className="section-lead">{t.menu.lead}</p>
         </div>
         <div>
           <OrderMenu />

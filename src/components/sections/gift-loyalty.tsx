@@ -1,42 +1,22 @@
-const steps = [
-  {
-    step: "01",
-    title: "Sip",
-    text: "Order whatever you're craving: milk tea, fruit tea, or coffee.",
-  },
-  {
-    step: "02",
-    title: "Earn",
-    text: "Every visit counts toward your next reward.",
-  },
-  {
-    step: "03",
-    title: "Enjoy a free drink",
-    text: "Once you've earned it, your next cup is on us.",
-  },
-]
+import { useI18n } from "@/lib/i18n"
+
+const STEP_NUMBERS = ["01", "02", "03"]
 
 export function GiftLoyalty() {
+  const { t } = useI18n()
   return (
     <section id="gift-cards" className="section section-alt">
       <div className="site-container flex flex-col gap-12">
         <div className="section-header">
-          <p className="section-kicker">Give &amp; get</p>
-          <h2 className="section-title">Gift cards &amp; Aloha Rewards</h2>
-          <p className="section-lead">
-            A little aloha goes a long way. Treat someone to their next drink,
-            or let your own orders add up to something free.
-          </p>
+          <p className="section-kicker">{t.gift.kicker}</p>
+          <h2 className="section-title">{t.gift.title}</h2>
+          <p className="section-lead">{t.gift.lead}</p>
         </div>
         <div className="split items-start">
           <div className="section-header">
-            <h3 className="subsection-title">Share a little aloha</h3>
+            <h3 className="subsection-title">{t.gift.shareTitle}</h3>
             <div className="prose-block">
-              <p>
-                An Aloha gift card is an easy way to say thanks, happy
-                birthday, or just thinking of you. Pick one up at the counter
-                and let them choose their own favorite.
-              </p>
+              <p>{t.gift.shareBody}</p>
             </div>
             {/* <div>
               <Button
@@ -49,11 +29,11 @@ export function GiftLoyalty() {
             </div> */}
           </div>
           <div className="section-header">
-            <h3 className="subsection-title">Aloha Rewards</h3>
+            <h3 className="subsection-title">{t.gift.rewardsTitle}</h3>
             <div className="perk-list">
-              {steps.map((s) => (
-                <div key={s.step} className="perk-item">
-                  <span className="perk-step">{s.step}</span>
+              {t.gift.steps.map((s, i) => (
+                <div key={STEP_NUMBERS[i]} className="perk-item">
+                  <span className="perk-step">{STEP_NUMBERS[i]}</span>
                   <div className="perk-body">
                     <p className="perk-title">{s.title}</p>
                     <p className="perk-text">{s.text}</p>

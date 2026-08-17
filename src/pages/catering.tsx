@@ -4,9 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { useI18n } from "@/lib/i18n"
 import { LOCATIONS, SITE } from "@/lib/site"
 
 export default function CateringPage() {
+  const { t } = useI18n()
+
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const data = new FormData(event.currentTarget)
@@ -26,18 +29,11 @@ export default function CateringPage() {
     <section className="section">
       <div className="site-container split items-start">
         <div className="section-header">
-          <p className="section-kicker">Catering</p>
-          <h2 className="section-title">Aloha for your whole crowd</h2>
+          <p className="section-kicker">{t.catering.kicker}</p>
+          <h2 className="section-title">{t.catering.title}</h2>
           <div className="prose-block">
-            <p>
-              Planning an office party, a wedding, a school event, or anything
-              in between? We&apos;ll bring the tea bar to you — milk teas,
-              fruit teas, and Vietnamese coffee, made fresh for your crowd.
-            </p>
-            <p>
-              Send us the details below and we&apos;ll get back to you with
-              options and pricing.
-            </p>
+            <p>{t.catering.p1}</p>
+            <p>{t.catering.p2}</p>
           </div>
           <div className="location-details">
             <p className="location-detail">
@@ -53,30 +49,28 @@ export default function CateringPage() {
         <form onSubmit={handleSubmit}>
           <FieldGroup>
             <Field>
-              <FieldLabel htmlFor="name">Name</FieldLabel>
+              <FieldLabel htmlFor="name">{t.catering.formName}</FieldLabel>
               <Input id="name" name="name" required />
             </Field>
             <Field>
-              <FieldLabel htmlFor="email">Email</FieldLabel>
+              <FieldLabel htmlFor="email">{t.catering.formEmail}</FieldLabel>
               <Input id="email" name="email" type="email" required />
             </Field>
             <Field>
-              <FieldLabel htmlFor="phone">Phone</FieldLabel>
+              <FieldLabel htmlFor="phone">{t.catering.formPhone}</FieldLabel>
               <Input id="phone" name="phone" type="tel" />
             </Field>
             <Field>
-              <FieldLabel htmlFor="date">Event date</FieldLabel>
+              <FieldLabel htmlFor="date">{t.catering.formDate}</FieldLabel>
               <Input id="date" name="date" type="date" />
             </Field>
             <Field>
-              <FieldLabel htmlFor="message">Tell us about your event</FieldLabel>
+              <FieldLabel htmlFor="message">{t.catering.formMessage}</FieldLabel>
               <Textarea id="message" name="message" rows={5} required />
-              <FieldDescription>
-                Guest count, location, and the drinks you have in mind.
-              </FieldDescription>
+              <FieldDescription>{t.catering.formHint}</FieldDescription>
             </Field>
             <div>
-              <Button type="submit">Send inquiry</Button>
+              <Button type="submit">{t.catering.submit}</Button>
             </div>
           </FieldGroup>
         </form>
