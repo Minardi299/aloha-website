@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { Logo } from "@/components/logo"
 import { FacebookIcon, InstagramIcon } from "@/components/social-icons"
-import { LOREM, SITE } from "@/lib/site"
+import { SITE } from "@/lib/site"
 
 export function Footer() {
   return (
@@ -13,7 +13,10 @@ export function Footer() {
               <Logo className="site-logo-mark" />
               {SITE.name}
             </div>
-            <p className="site-footer-blurb">{LOREM.short}</p>
+            <p className="site-footer-blurb">
+              Boba tea and Vietnamese coffee, made with care and served with
+              aloha in Glendale, Arizona.
+            </p>
           </div>
           <div className="site-footer-col">
             <p className="site-footer-heading">Explore</p>

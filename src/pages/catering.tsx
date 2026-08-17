@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Field, FieldDescription, FieldGroup, FieldLabel } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { LOCATIONS, LOREM, SITE } from "@/lib/site"
+import { LOCATIONS, SITE } from "@/lib/site"
 
 export default function CateringPage() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -29,8 +29,15 @@ export default function CateringPage() {
           <p className="section-kicker">Catering</p>
           <h2 className="section-title">Aloha for your whole crowd</h2>
           <div className="prose-block">
-            <p>{LOREM.medium}</p>
-            <p>{LOREM.short}</p>
+            <p>
+              Planning an office party, a wedding, a school event, or anything
+              in between? We&apos;ll bring the tea bar to you — milk teas,
+              fruit teas, and Vietnamese coffee, made fresh for your crowd.
+            </p>
+            <p>
+              Send us the details below and we&apos;ll get back to you with
+              options and pricing.
+            </p>
           </div>
           <div className="location-details">
             <p className="location-detail">

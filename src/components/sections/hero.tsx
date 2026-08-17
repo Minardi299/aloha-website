@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 import { Button } from "@/components/ui/button"
-import { LOREM, SITE } from "@/lib/site"
+import { SITE } from "@/lib/site"
 
 export function Hero() {
   return (
@@ -12,7 +12,11 @@ export function Hero() {
             Say <span className="hero-title-accent">aloha</span> to your new
             favorite cup
           </h1>
-          <p className="hero-lead">{LOREM.medium}</p>
+          <p className="hero-lead">
+            Hand-shaken milk teas, fresh fruit teas, and slow-dripped
+            Vietnamese coffee, made to order in Glendale, Arizona. Come in,
+            say hello, and find the drink you&apos;ll keep coming back for.
+          </p>
           <div className="hero-actions">
             <Button
               size="lg"

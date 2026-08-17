@@ -33,7 +33,7 @@ Deploy `build/client/` as the static root of any web host. Map the host's 404 ha
 - `src/index.css` — the single source of truth for styling: palette tokens, site tokens, and all section classes
 - `src/components/ui/` — components from the shadcn registry; add more with `pnpm dlx shadcn@latest add <name>`
 
-Body text is lorem ipsum placeholder copy. The Scottsdale address is a placeholder. The photos in `public/images/` are placeholders.
+The Scottsdale address, the gift card URL, the Facebook URL, and the catering email are placeholders. The photos in `public/images/` are placeholders.
 
 ## CI
 

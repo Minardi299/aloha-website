@@ -1,21 +1,21 @@
 import { Button } from "@/components/ui/button"
-import { LOREM, SITE } from "@/lib/site"
+import { SITE } from "@/lib/site"
 
 const steps = [
   {
     step: "01",
     title: "Sip",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    text: "Order whatever you're craving — milk tea, fruit tea, or coffee.",
   },
   {
     step: "02",
     title: "Earn",
-    text: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: "Every visit counts toward your next reward. Just ask at the counter.",
   },
   {
     step: "03",
     title: "Enjoy a free drink",
-    text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+    text: "Once you've earned it, your next cup is on us.",
   },
 ]
 
@@ -26,13 +26,20 @@ export function GiftLoyalty() {
         <div className="section-header">
           <p className="section-kicker">Give &amp; get</p>
           <h2 className="section-title">Gift cards &amp; Aloha Rewards</h2>
-          <p className="section-lead">{LOREM.short}</p>
+          <p className="section-lead">
+            A little aloha goes a long way. Treat someone to their next drink,
+            or let your own orders add up to something free.
+          </p>
         </div>
         <div className="split items-start">
           <div className="section-header">
             <h3 className="subsection-title">Share a little aloha</h3>
             <div className="prose-block">
-              <p>{LOREM.medium}</p>
+              <p>
+                An Aloha gift card is an easy way to say thanks, happy
+                birthday, or just thinking of you. Pick one up at the counter
+                and let them choose their own favorite.
+              </p>
             </div>
             <div>
               <Button
