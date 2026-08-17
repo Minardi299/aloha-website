@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section section-dark">
       <div className="site-container split">
         <img
           src="/images/about.jpg"

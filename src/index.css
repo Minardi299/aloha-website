@@ -49,72 +49,72 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
+    --background: #F7EEDD;
+    --foreground: #33220F;
+    --card: #FDF9F0;
+    --card-foreground: #33220F;
+    --popover: #FDF9F0;
+    --popover-foreground: #33220F;
+    --primary: #33220F;
+    --primary-foreground: #FFC233;
+    --secondary: #1E6CB0;
+    --secondary-foreground: #FFFFFF;
+    --muted: #F0E5D0;
+    --muted-foreground: rgb(51 34 15 / 0.75);
+    --accent: #F0E5D0;
+    --accent-foreground: #33220F;
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
+    --border: rgb(51 34 15 / 0.12);
+    --input: rgb(51 34 15 / 0.15);
+    --ring: #C2670C;
+    --chart-1: #C2670C;
+    --chart-2: #1E6CB0;
+    --chart-3: #FFC233;
+    --chart-4: #E8B04B;
+    --chart-5: #33220F;
     --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+    --sidebar: #FDF9F0;
+    --sidebar-foreground: #33220F;
+    --sidebar-primary: #33220F;
+    --sidebar-primary-foreground: #FFC233;
+    --sidebar-accent: #F0E5D0;
+    --sidebar-accent-foreground: #33220F;
+    --sidebar-border: rgb(51 34 15 / 0.12);
+    --sidebar-ring: #C2670C;
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
+    --background: #241708;
+    --foreground: #FBF4E6;
+    --card: #33220F;
+    --card-foreground: #FBF4E6;
+    --popover: #33220F;
+    --popover-foreground: #FBF4E6;
+    --primary: #FFC233;
+    --primary-foreground: #33220F;
+    --secondary: #1E6CB0;
+    --secondary-foreground: #FFFFFF;
+    --muted: #3E2A14;
+    --muted-foreground: rgb(251 244 230 / 0.7);
+    --accent: #3E2A14;
+    --accent-foreground: #FBF4E6;
     --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --border: rgb(251 244 230 / 0.15);
+    --input: rgb(251 244 230 / 0.2);
+    --ring: #FFC233;
+    --chart-1: #C2670C;
+    --chart-2: #1E6CB0;
+    --chart-3: #FFC233;
+    --chart-4: #E8B04B;
+    --chart-5: #FBF4E6;
+    --sidebar: #33220F;
+    --sidebar-foreground: #FBF4E6;
+    --sidebar-primary: #FFC233;
+    --sidebar-primary-foreground: #33220F;
+    --sidebar-accent: #3E2A14;
+    --sidebar-accent-foreground: #FBF4E6;
+    --sidebar-border: rgb(251 244 230 / 0.15);
+    --sidebar-ring: #FFC233;
 }
 
 /* ===== Site tokens ===== */
@@ -122,6 +122,12 @@
     --container-max: 68rem;
     --section-pad: 5.5rem;
     --header-height: 4rem;
+    --brand-orange: #C2670C;
+    --brand-yellow: #FFC233;
+    --brand-blue: #1E6CB0;
+    --brand-amber: #E8B04B;
+    --surface-dark: #33220F;
+    --surface-dark-foreground: #FBF4E6;
 }
 
 @layer base {
@@ -154,7 +160,8 @@
     @apply flex max-w-2xl flex-col gap-3;
   }
   .section-kicker {
-    @apply text-sm font-semibold tracking-widest text-muted-foreground uppercase;
+    @apply text-sm font-semibold tracking-widest uppercase;
+    color: var(--brand-orange);
   }
   .section-title {
     @apply font-heading text-3xl font-semibold tracking-tight text-balance sm:text-4xl;
@@ -170,6 +177,19 @@
   }
   .photo {
     @apply w-full rounded-lg border object-cover;
+  }
+  .section-dark {
+    background: var(--surface-dark);
+    color: var(--surface-dark-foreground);
+  }
+  .section-dark .section-kicker {
+    color: var(--brand-yellow);
+  }
+  .section-dark .prose-block {
+    color: rgb(251 244 230 / 0.85);
+  }
+  .section-dark .photo {
+    border-color: rgb(251 244 230 / 0.15);
   }
 
   /* ===== Header / nav ===== */
@@ -207,7 +227,8 @@
     @apply flex flex-col items-start gap-6;
   }
   .hero-eyebrow {
-    @apply rounded-md border bg-muted px-3 py-1 text-sm font-medium text-muted-foreground;
+    @apply rounded-md border bg-muted px-3 py-1 text-sm font-medium;
+    color: var(--brand-orange);
   }
   .hero-title {
     @apply font-heading text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl;
@@ -216,7 +237,8 @@
     @apply relative inline-block;
   }
   .hero-title-accent::after {
-    @apply bg-primary/20 absolute inset-x-0 bottom-1 -z-10 h-3 content-[''];
+    @apply absolute inset-x-0 bottom-1 -z-10 h-3 content-[''];
+    background: rgb(232 176 75 / 0.5);
   }
   .hero-lead {
     @apply max-w-xl text-lg text-muted-foreground;
@@ -240,7 +262,8 @@
     @apply flex items-start gap-4;
   }
   .perk-step {
-    @apply font-heading text-2xl font-semibold text-muted-foreground/60 tabular-nums;
+    @apply font-heading text-2xl font-semibold tabular-nums;
+    color: var(--brand-blue);
   }
   .perk-body {
     @apply flex flex-col gap-1;
@@ -272,12 +295,18 @@
     @apply flex items-start gap-2.5;
   }
   .location-detail-icon {
-    @apply text-primary mt-0.5 size-4 shrink-0;
+    @apply mt-0.5 size-4 shrink-0;
+    color: var(--brand-orange);
   }
 
   /* ===== Footer ===== */
   .site-footer {
-    @apply border-t bg-muted/50;
+    background: var(--surface-dark);
+    color: var(--surface-dark-foreground);
+  }
+  .site-footer .site-logo-mark {
+    background: var(--surface-dark-foreground);
+    @apply rounded-md p-0.5;
   }
   .site-footer-inner {
     @apply grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4;
@@ -286,28 +315,40 @@
     @apply flex flex-col gap-4 sm:col-span-2;
   }
   .site-footer-blurb {
-    @apply max-w-xs text-sm text-muted-foreground;
+    @apply max-w-xs text-sm;
+    color: rgb(251 244 230 / 0.85);
   }
   .site-footer-heading {
     @apply text-sm font-semibold;
+    color: var(--brand-yellow);
   }
   .site-footer-col {
     @apply flex flex-col gap-3;
   }
   .site-footer-link {
-    @apply text-sm text-muted-foreground hover:text-foreground;
+    @apply text-sm;
+    color: rgb(251 244 230 / 0.85);
+  }
+  .site-footer-link:hover {
+    color: var(--surface-dark-foreground);
   }
   .social-row {
     @apply flex items-center gap-3;
   }
   .social-link {
-    @apply text-muted-foreground transition-colors hover:text-primary;
+    @apply transition-colors;
+    color: rgb(251 244 230 / 0.85);
+  }
+  .social-link:hover {
+    color: var(--brand-yellow);
   }
   .social-link svg {
     @apply size-5;
   }
   .site-footer-bottom {
-    @apply flex flex-col items-start justify-between gap-2 border-t py-6 text-sm text-muted-foreground sm:flex-row sm:items-center;
+    @apply flex flex-col items-start justify-between gap-2 border-t py-6 text-sm sm:flex-row sm:items-center;
+    border-color: rgb(251 244 230 / 0.15);
+    color: rgb(251 244 230 / 0.6);
   }
 
   /* ===== 404 page ===== */
