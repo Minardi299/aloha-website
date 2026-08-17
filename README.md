@@ -43,11 +43,41 @@ To run CI by hand, open Actions → CI → "Run workflow", or run `gh workflow r
 
 ## Releases
 
-Push a tag that starts with `v` to publish a release:
+Every push to `main` rebuilds the rolling `latest` release. Its zip always matches the current state of `main`.
+
+To publish a versioned release, push a tag that starts with `v`:
 
 ```sh
 git tag v0.1.0
 git push origin v0.1.0
 ```
 
-The release workflow builds the site, zips it, and attaches the zip to a GitHub release. Download the zip, unzip it, and serve the folder with any static server, for example `python3 -m http.server 8000`. You can also start the workflow from the Actions tab with a tag name.
+The release workflow builds the site, zips it, and attaches the zip to a GitHub release. You can also start the workflow from the Actions tab with a tag name.
+
+## Deploy a release zip
+
+The zip on the Releases page is the built site: plain HTML, CSS, JS, and images. It needs no build step and no Node.
+
+Serve the files over HTTP. Do not open `index.html` from the file system — asset paths and ES modules do not work on `file://` URLs.
+
+To run it on your own machine:
+
+```sh
+unzip aloha-website-latest.zip -d aloha-site
+cd aloha-site
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000. `npx serve` works too.
+
+To deploy it, upload the folder contents (with `index.html` at the web root) to any static host:
+
+- **Cloudflare Workers** — run `npx wrangler deploy` with a `wrangler.jsonc` that points `assets.directory` at the folder. This repo's config file is a working example.
+- **Netlify** — drag the folder onto [app.netlify.com/drop](https://app.netlify.com/drop).
+- **Vercel** — run `npx vercel --prod` inside the folder.
+- **nginx, Apache, S3, or cPanel** — copy the folder contents into the server root (for example `public_html`).
+
+Two host settings matter:
+
+1. Map the host's 404 page to `404.html` so unknown URLs show the site's own 404 page.
+2. Serve the site from the domain root (`example.com`), not a subfolder. Asset URLs start with `/`, so a subfolder breaks them.

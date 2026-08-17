@@ -3,6 +3,7 @@ name: Release
 on:
   push:
     tags: ["v*"]
+    branches: [main]
   workflow_dispatch:
     inputs:
       tag:
@@ -33,7 +34,13 @@ jobs:
 
       - name: Package the site
         run: |
-          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          if [ "${{ github.ref_type }}" = "tag" ]; then
+            TAG="${{ github.ref_name }}"
+          elif [ -n "${{ github.event.inputs.tag }}" ]; then
+            TAG="${{ github.event.inputs.tag }}"
+          else
+            TAG="latest"
+          fi
           echo "TAG=$TAG" >> "$GITHUB_ENV"
           cd build/client
           zip -r "../../aloha-website-$TAG.zip" .
@@ -42,9 +49,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          if [ "$TAG" = "latest" ]; then
+            gh release delete latest --repo "${{ github.repository }}" --yes --cleanup-tag || true
+            TITLE="Aloha Tea Coffee website (latest build, ${GITHUB_SHA::7})"
+          else
+            TITLE="Aloha Tea Coffee website $TAG"
+          fi
           gh release create "$TAG" "aloha-website-$TAG.zip" \
             --repo "${{ github.repository }}" \
-            --title "Aloha Tea Coffee website $TAG" \
+            --target "$GITHUB_SHA" \
+            --title "$TITLE" \
             --notes "Static build of the site (plain HTML, CSS, and JS).
 
           To run it locally:
@@ -52,4 +66,4 @@ jobs:
           2. Serve the folder with any static server, for example: \`python3 -m http.server 8000\` or \`npx serve\`.
           3. Open http://localhost:8000 in a browser.
 
-          To deploy, upload the folder contents to any static web host. Map the host's 404 page to \`__spa-fallback.html\`."
+          To deploy, upload the folder contents to any static web host. Map the host's 404 page to \`404.html\`. See the README for host-specific steps."
