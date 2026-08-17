@@ -119,7 +119,7 @@ export const STRINGS = {
     notFound: {
       kicker: "Error 404",
       title: "This cup is empty",
-      text: "The page you're looking for isn’t on the menu. Head back home — or better yet, come see us for a real cup.",
+      text: "The page you're looking for isn't on the menu. Head back home — or better yet, come see us for a real cup.",
       backHome: "Back to home",
       findLocation: "Find a location",
     },
