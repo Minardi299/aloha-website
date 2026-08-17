@@ -31,7 +31,7 @@ export function Hero() {
         </div>
         <img
           src="/images/hero.jpg"
-          alt="The counter at Aloha Tea Coffee"
+          alt="An iced rose tea in an Aloha Tea Coffee cup"
           className="hero-photo"
         />
       </div>

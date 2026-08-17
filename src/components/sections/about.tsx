@@ -4,7 +4,7 @@ export function About() {
       <div className="site-container split">
         <img
           src="/images/about.jpg"
-          alt="Three friends sharing drinks at Aloha Tea Coffee"
+          alt="A layered strawberry drink with matcha cream in an Aloha Tea Coffee cup"
           className="photo aspect-[4/3]"
         />
         <div className="section-header">
