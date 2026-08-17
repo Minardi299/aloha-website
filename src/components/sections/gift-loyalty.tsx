@@ -1,16 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { SITE } from "@/lib/site"
-
 const steps = [
   {
     step: "01",
     title: "Sip",
-    text: "Order whatever you're craving — milk tea, fruit tea, or coffee.",
+    text: "Order whatever you're craving: milk tea, fruit tea, or coffee.",
   },
   {
     step: "02",
     title: "Earn",
-    text: "Every visit counts toward your next reward. Just ask at the counter.",
+    text: "Every visit counts toward your next reward.",
   },
   {
     step: "03",
@@ -41,7 +38,7 @@ export function GiftLoyalty() {
                 and let them choose their own favorite.
               </p>
             </div>
-            <div>
+            {/* <div>
               <Button
                 variant="outline"
                 nativeButton={false}
@@ -49,7 +46,7 @@ export function GiftLoyalty() {
               >
                 Buy a gift card
               </Button>
-            </div>
+            </div> */}
           </div>
           <div className="section-header">
             <h3 className="subsection-title">Aloha Rewards</h3>

@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { Logo } from "@/components/logo"
 import { FacebookIcon, InstagramIcon } from "@/components/social-icons"
-import { SITE } from "@/lib/site"
+import { LOCATIONS, SITE } from "@/lib/site"
 
 export function Footer() {
   return (
@@ -38,14 +38,17 @@ export function Footer() {
           </div>
           <div className="site-footer-col">
             <p className="site-footer-heading">Follow us</p>
-            <a
-              href={SITE.orderUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="site-footer-link"
-            >
-              Order online
-            </a>
+            {LOCATIONS.map((location) => (
+              <a
+                key={location.name}
+                href={location.orderUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="site-footer-link"
+              >
+                Order online · {location.name}
+              </a>
+            ))}
             <div className="social-row">
               <a
                 href={SITE.instagramUrl}

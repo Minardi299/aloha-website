@@ -1,8 +1,6 @@
 export const SITE = {
   name: "Aloha Tea Coffee",
   tagline: "Boba tea, Vietnamese coffee, and a warm hello.",
-  orderUrl:
-    "https://www.doordash.com/store/aloha-tea-&-coffee-glendale-624890/",
   giftCardUrl: "#",
   instagramUrl: "https://www.instagram.com/aloha.teacoffee/",
   facebookUrl: "#",
@@ -15,6 +13,7 @@ export type Location = {
   phone: string
   hours: string[]
   mapsUrl: string
+  orderUrl: string
   photo: string
   openingSoon?: boolean
 }
@@ -30,6 +29,7 @@ export const LOCATIONS: Location[] = [
       "Sun · 10 am – 9:30 pm",
     ],
     mapsUrl: "https://maps.google.com/?q=6766+W+Glendale+Ave,+Glendale,+AZ+85303",
+    orderUrl: "https://alohaglendale.magsoft.us/order/online/desktop",
     photo: "/images/location-glendale.jpg",
   },
   {
@@ -38,6 +38,7 @@ export const LOCATIONS: Location[] = [
     phone: "(480) 000-0000",
     hours: ["Hours coming soon"],
     mapsUrl: "https://maps.google.com/?q=Scottsdale,+AZ",
+    orderUrl: "https://aloha2.magsoft.us/order/online/desktop",
     photo: "/images/location-scottsdale.jpg",
     openingSoon: true,
   },

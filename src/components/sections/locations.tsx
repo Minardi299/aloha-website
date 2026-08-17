@@ -43,7 +43,20 @@ export function Locations() {
                   </span>
                 </div>
               </div>
-              <div>
+              <div className="flex gap-3">
+                <Button
+                  size="sm"
+                  nativeButton={false}
+                  render={
+                    <a
+                      href={location.orderUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                    />
+                  }
+                >
+                  Order online
+                </Button>
                 <Button
                   variant="outline"
                   size="sm"

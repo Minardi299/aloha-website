@@ -1,6 +1,6 @@
 import { Link } from "react-router"
+import { OrderMenu } from "@/components/order-menu"
 import { Button } from "@/components/ui/button"
-import { SITE } from "@/lib/site"
 
 export function Hero() {
   return (
@@ -18,15 +18,7 @@ export function Hero() {
             say hello, and find the drink you&apos;ll keep coming back for.
           </p>
           <div className="hero-actions">
-            <Button
-              size="lg"
-              nativeButton={false}
-              render={
-                <a href={SITE.orderUrl} target="_blank" rel="noreferrer" />
-              }
-            >
-              Order now
-            </Button>
+            <OrderMenu size="lg" />
             <Button
               size="lg"
               variant="outline"

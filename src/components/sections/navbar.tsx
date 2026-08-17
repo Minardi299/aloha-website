@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 import { Logo } from "@/components/logo"
-import { Button } from "@/components/ui/button"
+import { OrderMenu } from "@/components/order-menu"
 import { SITE } from "@/lib/site"
 
 export function Navbar() {
@@ -18,12 +18,7 @@ export function Navbar() {
           <Link to="/#about" className="site-nav-link">
             About us
           </Link>
-          <Button
-            nativeButton={false}
-            render={<a href={SITE.orderUrl} target="_blank" rel="noreferrer" />}
-          >
-            Order now
-          </Button>
+          <OrderMenu />
         </nav>
       </div>
     </header>

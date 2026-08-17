@@ -23,7 +23,7 @@ export function About() {
               a regular from your very first visit, whether you&apos;re
               grabbing a coffee on the way to work or settling in with friends
               over a round of milk teas. Quality in the cup, warmth in the
-              room — that&apos;s the whole recipe.
+              room, that&apos;s the whole recipe.
             </p>
           </div>
         </div>
