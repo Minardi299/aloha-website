@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useLocation } from "react-router"
 import { MenuIcon, XIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { USFlagIcon, VNFlagIcon } from "@/components/flag-icons"
 import { Logo } from "@/components/logo"
 import { OrderMenu } from "@/components/order-menu"
 import { useI18n, type Lang } from "@/lib/i18n"
@@ -21,8 +22,14 @@ function LangSwitch() {
           to={target(l)}
           className="lang-switch-link"
           aria-current={lang === l ? "true" : undefined}
+          aria-label={l === "en" ? "English" : "Tiếng Việt"}
+          title={l === "en" ? "English" : "Tiếng Việt"}
         >
-          {l.toUpperCase()}
+          {l === "en" ? (
+            <USFlagIcon className="lang-flag" />
+          ) : (
+            <VNFlagIcon className="lang-flag" />
+          )}
         </Link>
       ))}
     </div>
