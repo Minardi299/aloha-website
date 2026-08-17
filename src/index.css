@@ -316,41 +316,20 @@
   /* ===== Menu page ===== */
   .menu-header {
     @apply flex flex-col gap-6;
-    padding-block: calc(var(--section-pad) * 0.7) 2.5rem;
-  }
-  .menu-tabs {
-    @apply sticky z-30 border-y bg-background;
-    top: var(--header-height);
-  }
-  .menu-tabs-inner {
-    @apply flex gap-1 overflow-x-auto;
-    scrollbar-width: none;
-  }
-  .menu-tab {
-    @apply px-3 py-3 text-sm font-medium whitespace-nowrap text-muted-foreground;
-  }
-  .menu-tab:hover {
-    color: var(--brand-orange);
-  }
-  .menu-sections {
-    @apply flex flex-col gap-14 pt-10;
-    padding-bottom: var(--section-pad);
-  }
-  .menu-section {
-    @apply flex flex-col gap-6;
-    scroll-margin-top: calc(var(--header-height) + 3.5rem);
+    padding-block: calc(var(--section-pad) * 0.7) 3rem;
   }
   .menu-grid {
-    @apply grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4;
+    @apply grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3;
+    padding-bottom: var(--section-pad);
   }
-  .menu-item {
-    @apply flex flex-col items-center gap-2.5 text-center;
+  .menu-card {
+    @apply flex flex-col items-center gap-3 text-center;
   }
-  .menu-item-photo {
-    @apply aspect-square w-full rounded-lg border bg-card object-cover;
+  .menu-card-photo {
+    @apply aspect-[4/3] w-full rounded-lg border bg-card object-cover;
   }
-  .menu-item-name {
-    @apply text-sm font-medium;
+  .menu-card-name {
+    @apply font-heading text-lg font-semibold;
   }
 
   /* ===== Footer ===== */
